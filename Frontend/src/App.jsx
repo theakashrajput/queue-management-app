@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DashboardQueue from "./components/DashboardQueue";
 import InputQueue from "./components/InputQueue";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App = () => {
   const [queueData, setQueueData] = useState([]);
@@ -18,6 +19,7 @@ const App = () => {
         <InputQueue queueData={queueData} setQueueData={setQueueData} />
         <DashboardQueue queueData={queueData} setQueueData={setQueueData} />
       </div>
+      <SpeedInsights />
     </div>
   );
 };
